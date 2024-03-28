@@ -15,7 +15,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: rancher.212.2.241.168.sslip.io
+    - host: rancher.${var.dns_domain}.sslip.io
       paths:
         - path: /api/examplepy
           pathType: Prefix

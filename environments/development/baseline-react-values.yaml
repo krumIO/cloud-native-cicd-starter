@@ -15,7 +15,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: react.212.2.241.168.sslip.io
+    - host: react.${var.dns_domain}.sslip.io
       paths:
         - path: /
           pathType: Prefix

@@ -17,13 +17,13 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: golang.212.2.241.168.sslip.io
+    - host: golang.${var.dns_domain}.sslip.io
       paths:
         - path: /
           pathType: Prefix
   tls:
     - hosts:
-        - golang.212.2.241.168.sslip.io
+        - golang.${var.dns_domain}.sslip.io
       secretName: baseline-golang-app-tls
 resources:
   limits:
